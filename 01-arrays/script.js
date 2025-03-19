@@ -58,3 +58,7 @@ for (let i = 0; i < teachers.length; i++) {
   }
 }
 console.log(isTeachersEmpty);
+
+// 8a. modo alternativo usando length
+const isTeachersEmpty2 = teachers.length === 0;
+console.log(isTeachersEmpty2);
