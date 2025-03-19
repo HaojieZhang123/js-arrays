@@ -45,9 +45,19 @@ for (let i = 0; i < teachers.length; i++) {
 }
 console.log(lewisIndex);
 
-// 7a. modo alternativo usando indexOf
-const lewisIndex2 = teachers.indexOf('Lewis');
+// 7a modo alternativo mantenendo const e usando for
+let index = 0;
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] === 'Lewis') {
+    index = i;
+  }
+}
+const lewisIndex2 = index;
 console.log(lewisIndex2);
+
+// 7b modo alternativo usando indexOf
+const lewisIndex3 = teachers.indexOf('Lewis');
+console.log(lewisIndex3);
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
@@ -59,6 +69,16 @@ for (let i = 0; i < teachers.length; i++) {
 }
 console.log(isTeachersEmpty);
 
-// 8a. modo alternativo usando length
+// 8a. modo alternativo mantenendo const e usando for
+let flag = true;
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] != '') {
+    flag = false;
+  }
+}
+const isTeachersEmpty3 = flag;
+console.log(isTeachersEmpty3);
+
+// 8b. modo alternativo usando length
 const isTeachersEmpty2 = teachers.length === 0;
 console.log(isTeachersEmpty2);
